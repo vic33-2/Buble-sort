@@ -78,7 +78,12 @@ public class BubleSort {
             if (!intercambio) break;
         }
     }
-
+ public static void escribirArchivo(int[] arr, String nombreArchivo) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo))) {
+            for (int num : arr) {
+                bw.write(num + "");
+                bw.newLine();
+            }
         } catch (IOException e) { // catch por algun error en el archivo
             System.out.println("Error al escribir el archivo: " + e.getMessage());
         }

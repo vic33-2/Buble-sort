@@ -78,6 +78,13 @@ public class BubleSort {
             if (!intercambio) break;
         }
     }
+    public static void imprimirArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+    
  public static void escribirArchivo(int[] arr, String nombreArchivo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo))) {
             for (int num : arr) {
